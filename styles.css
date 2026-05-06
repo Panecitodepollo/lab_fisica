@@ -1,84 +1,202 @@
-body {
+/* ===============================
+   RESET BÁSICO
+================================ */
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: radial-gradient(circle, #0f172a, #020617);
-  color: white;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* ===============================
+   BODY
+================================ */
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #0b0f19;
+  color: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  padding: 30px 15px;
+}
+
+/* ===============================
+   CONTENEDOR
+================================ */
 .container {
-  max-width: 1000px;
-  margin: auto;
-  text-align: center;
-  padding: 20px;
+  width: 100%;
+  max-width: 900px;
 }
 
+/* ===============================
+   TITULOS
+================================ */
 h1 {
-  font-size: 3rem;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
 }
 
-.subtitle {
-  color: #94a3b8;
-  margin-bottom: 20px;
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
 }
 
-.panel {
-  background: rgba(255,255,255,0.05);
+h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+/* ===============================
+   ENUNCIADO
+================================ */
+.enunciado {
+  background: #111827;
+  border: 1px solid #1f2937;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 12px;
   margin-bottom: 20px;
-  backdrop-filter: blur(10px);
+}
+
+.enunciado p {
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+.enunciado ul {
+  padding-left: 20px;
+  color: #9ca3af;
+}
+
+/* ===============================
+   PANEL CONTROLES
+================================ */
+.panel {
+  background: #111827;
+  border: 1px solid #1f2937;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
 }
 
 .control {
-  margin: 15px 0;
+  margin-bottom: 15px;
 }
 
-input[type=range] {
-  width: 80%;
+label {
+  display: block;
+  font-size: 14px;
+  color: #9ca3af;
+  margin-bottom: 5px;
 }
 
-button {
-  padding: 12px 25px;
-  border: none;
-  border-radius: 12px;
+/* ===============================
+   SLIDERS
+================================ */
+input[type="range"] {
+  width: 100%;
+  appearance: none;
+  height: 4px;
+  background: #1f2937;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Bolita del slider */
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
   background: #22c55e;
-  font-weight: bold;
+  border-radius: 50%;
   cursor: pointer;
-  transition: 0.3s;
+}
+
+/* ===============================
+   BOTÓN
+================================ */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #22c55e;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #052e16;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 button:hover {
   background: #16a34a;
 }
 
+/* ===============================
+   RESULTADOS
+================================ */
 .resultados {
-  margin: 20px 0;
+  margin-top: 20px;
+}
+
+/* Bloques de preguntas */
+.bloque {
+  background: #111827;
+  border: 1px solid #1f2937;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Pregunta */
+.pregunta {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* Respuesta */
+.respuesta {
   font-size: 18px;
+  font-weight: 600;
+  margin-top: 5px;
 }
 
-canvas {
-  width: 100%;
-  height: 200px;
-  background: #020617;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
+/* ===============================
+   ESCENARIO
+================================ */
 .escenario {
-  height: 150px;
+  margin-top: 25px;
+  height: 120px;
+  background: #020617;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
   position: relative;
-  border-radius: 15px;
   overflow: hidden;
-  background: linear-gradient(to top, #020617, #1e293b);
 }
 
+/* ===============================
+   CUBO MINIMALISTA PRO
+================================ */
 #objeto {
-  width: 50px;
-  height: 50px;
-  background: #f43f5e;
+  width: 36px;
+  height: 36px;
+  background: #e5e7eb;
+  border-radius: 6px;
   position: absolute;
-  bottom: 10px;
+  bottom: 12px;
   left: 0;
-  border-radius: 10px;
-  box-shadow: 0 0 25px red;
+
+  /* Detalles finos */
+  border: 1px solid #374151;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .respuesta {
+    font-size: 16px;
+  }
 }

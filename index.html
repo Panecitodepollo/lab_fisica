@@ -2,16 +2,32 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Newton Simulator PRO</title>
+  <title>Simulador Leyes de Newton</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <div class="container">
 
-  <h1>⚡ Newton Simulator</h1>
-  <p class="subtitle">Segunda Ley en tiempo real</p>
+  <h1>⚡ Simulador de Newton</h1>
 
+  <!-- ENUNCIADO -->
+  <div class="enunciado">
+    <h2>📘 Problema</h2>
+    <p>
+      Un bloque de masa <b>m</b> se mueve sobre una superficie horizontal sin fricción.
+      Se le aplica una fuerza constante <b>F</b> durante un tiempo <b>t</b>.
+    </p>
+
+    <h3>❓ Preguntas</h3>
+    <ul>
+      <li>¿Cuál es la aceleración del objeto?</li>
+      <li>¿Qué velocidad alcanza después del tiempo t?</li>
+      <li>¿Qué distancia recorre?</li>
+    </ul>
+  </div>
+
+  <!-- CONTROLES -->
   <div class="panel">
 
     <div class="control">
@@ -29,14 +45,14 @@
       <input type="range" id="tiempo" min="1" max="10" value="5">
     </div>
 
-    <button onclick="calcular()">Simular</button>
+    <button onclick="calcular()">Resolver</button>
 
   </div>
 
+  <!-- RESULTADOS -->
   <div class="resultados" id="resultado"></div>
 
-  <canvas id="grafica"></canvas>
-
+  <!-- ANIMACIÓN -->
   <div class="escenario">
     <div id="objeto"></div>
   </div>
