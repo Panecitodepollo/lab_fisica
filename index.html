@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Newton Simulator PRO</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h1>⚡ Newton Simulator</h1>
+  <p class="subtitle">Segunda Ley en tiempo real</p>
+
+  <div class="panel">
+
+    <div class="control">
+      <label>Fuerza (N): <span id="fuerzaVal">20</span></label>
+      <input type="range" id="fuerza" min="1" max="100" value="20">
+    </div>
+
+    <div class="control">
+      <label>Masa (kg): <span id="masaVal">5</span></label>
+      <input type="range" id="masa" min="1" max="20" value="5">
+    </div>
+
+    <div class="control">
+      <label>Tiempo (s): <span id="tiempoVal">5</span></label>
+      <input type="range" id="tiempo" min="1" max="10" value="5">
+    </div>
+
+    <button onclick="calcular()">Simular</button>
+
+  </div>
+
+  <div class="resultados" id="resultado"></div>
+
+  <canvas id="grafica"></canvas>
+
+  <div class="escenario">
+    <div id="objeto"></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
